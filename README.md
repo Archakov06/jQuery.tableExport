@@ -29,18 +29,11 @@ $('.table').tableExport({
 (or using options):
 
 ```javascript
-$('.mytableclass').ZtrintTableExporter({
-  filename: 'My very first exported table',     //the filename prefix (the extension is automatic)
-  title: 'Export my beautiful table to ',       //the title shown in link's mouse hover event
-  formats: ['txt','csv','xls']                  //you can choose txt, csv or both (by default)
-});
-
 $('.table').tableExport({
-		filename: 'table_%DD%-%MM%-%YY%',	// the filename prefix + date format (the extension is automatic) 
-		format: 'xls', 						// type of your export file: csv, xls, txt, sql
-		cols: '2,3,4'						// export of specified columns
-	});
-
+	filename: 'table_%DD%-%MM%-%YY%',	// the filename prefix + date format (the extension is automatic) 
+	format: 'xls', 						// type of your export file: csv, xls, txt, sql
+	cols: '2,3,4'						// export of specified columns
+});
 ```
 
 Options
