@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/plain; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <div class="container home">
+
+    <div class="row">
+    	<h1 class="sub-header">Export Table: Example #1</h1>
+  	
+  	<div class="top-panel">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">Export to <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a onclick="exportTo('csv');" href="javascript://">CSV</a></li>
+          <li><a onclick="exportTo('txt');" href="javascript://">TXT</a></li>
+          <li><a onclick="exportTo('xls');" href="javascript://">XLS</a></li>
+          <li><a onclick="exportTo('sql');" href="javascript://">SQL</a></li>
+        </ul>
+      </div>
+  	</div>
+
+  	<div class="table-responsive">
+          <table id="firm_table" class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail</th>
+                <th>Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Delpha</td>
+                <td>siliciophite</td>
+                <td>circumflex@masterwork.net</td>
+                <td>997300858</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Paula</td>
+                <td>Ausiello</td>
+                <td>bemirrorment@moy.edu</td>
+                <td>779213455</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Gaynell</td>
+                <td>Salguero</td>
+                <td>smoothpate@podalgia.edu</td>
+                <td>999908414</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Otelia</td>
+                <td>Nitta</td>
+                <td>hispanophile@auditorship.edu</td>
+                <td>947377435</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Darren</td>
+                <td>Maltez</td>
+                <td>toxotidae@tut.net</td>
+                <td>902590424</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Larraine</td>
+                <td>Zelasco</td>
+                <td>lanciers@unpleasantish.co.uk</td>
+                <td>668639791</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="http://bootstrap-3.ru/dist/js/bootstrap.min.js"></script>
+  <script src="../tableExporter.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
