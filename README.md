@@ -3,7 +3,7 @@ About
 
 This is a simple jQuery plug-in that allows exporting html tables to *CSV*, *XLS*, *TXT*, *SQL*.
 
-![Example work](https://media.giphy.com/media/l41Ykx80wznyir8Yg/giphy.gif)
+![Example work](http://archakov.im/uploads/tableExport-1.gif)
 
 
 Usage
