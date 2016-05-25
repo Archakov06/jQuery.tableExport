@@ -29,29 +29,36 @@ $('.table').tableExport({
 (or using options):
 
 ```javascript
-$('.table').tableExport({
-	filename: 'table_%DD%-%MM%-%YY%',	// the filename prefix + date format (the extension is automatic) 
-	format: 'xls', 						// type of your export file: csv, xls, txt, sql
-	cols: '2,3,4'						// export of specified columns
+$('.mytableclass').ZtrintTableExporter({
+  filename: 'My very first exported table',     //the filename prefix (the extension is automatic)
+  title: 'Export my beautiful table to ',       //the title shown in link's mouse hover event
+  formats: ['txt','csv','xls']                  //you can choose txt, csv or both (by default)
 });
+
+$('.table').tableExport({
+		filename: 'table_%DD%-%MM%-%YY%',	// the filename prefix + date format (the extension is automatic) 
+		format: 'xls', 						// type of your export file: csv, xls, txt, sql
+		cols: '2,3,4'						// export of specified columns
+	});
+
 ```
 
 Options
 -----------------------------------------------------------------------------------------
 * 	**filename**
-	- the name of the exported file (without extension)
+	— the name of the exported file (without extension)
 * 	**format**
-	- the export file format (only: csv, xls, txt, sql)
+	— the export file format (only: csv, xls, txt, sql)
 * 	**cols**
-	- select specific columns for export
+	— select specific columns for export
 * 	**head_delimiter**
-	- separator for titles when exporting
+	— separator for titles when exporting
 * 	**column_delimiter**
-	- separator for column when exporting
+	— separator for column when exporting
 *	**before(this)**
-	Function to call before trigger is called
+	— Function to call before trigger is called
 *	**onafter(this)**
-	Function to call after trigger is called
+	— Function to call after trigger is called
 
 Demos
 -----------------------------------------------------------------------------------------
