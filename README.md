@@ -73,8 +73,8 @@ Demos
 
 More demos in the examples folder. Or on the links below :)
 
-* 	**[Example #1](https://pages.github.com/)**
-* 	**[Example #2](https://pages.github.com/)**
+* 	**[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
+* 	**[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
 
 ## Contacts
 * 	**E-Mail**
