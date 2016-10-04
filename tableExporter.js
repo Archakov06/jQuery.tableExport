@@ -1,7 +1,7 @@
 /* 
  * jQuery-tableExport - v1.0 - 2016-05-25
  * https://github.com/Archakov06/jQuery-tableExport
- * Released under the MIT License
+ * Released under the MIT License.
 */
 
 (function ($) {
