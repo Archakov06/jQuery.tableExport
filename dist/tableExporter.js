@@ -94,8 +94,9 @@
             }
 
             a.download = filename + '.' + format;
+            document.body.appendChild(a);
             a.click();
-            a.remove();
+            if (!navigator.userAgent.toLowerCase().match(/firefox/)) a.remove();
         }
 
         options.onafter($this);
