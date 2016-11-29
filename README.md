@@ -76,9 +76,17 @@ More demos in the examples folder. Or on the links below :)
 * 	**[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
 * 	**[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
 
+
+To Do
+-----------------------------------------------------------------------------------------
+
+- [x] Parsing date
+- [x] Exporting SQL
+- [ ] Support Safari browser
+
 ## Contacts
 * 	**E-Mail**
-	<archakov@gatafan.com>
+	<hello@archakov.im>
 * 	**Website**
 	<http://archakov.im>
 

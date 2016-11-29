@@ -8,3 +8,12 @@ function exportTo(type) {
 	});
 
 }
+
+function exportAll(type) {
+
+	$('.table').tableExport({
+		filename: 'table_%DD%-%MM%-%YY%-month(%MM%)',
+		format: type
+	});
+
+}

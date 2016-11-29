@@ -75,7 +75,8 @@
 
         function download(data,filename,format){
             var a = document.createElement("a");
-            a.href = URL.createObjectURL(new Blob([data], {type: data_type[format]}));
+            var blob = new Blob([data], {type: data_type[format]});
+            a.href = URL.createObjectURL(blob);
 
             var now = new Date();
             var time_arr = [
@@ -87,11 +88,12 @@
                 'ss:'+now.getSeconds()
             ];
 
-            for (var i = 0; i < time_arr.length; i++) {
-                var key = time_arr[i].split(':')[0];
-                var val = time_arr[i].split(':')[1];
-                filename = filename.replace( '%'+key+'%', val);
-            }
+            time_arr.forEach(function(item){
+                var key = item.split(':')[0];
+                var val = item.split(':')[1];
+                var regexp = new RegExp('%'+key+'%','g');
+                filename = filename.replace( regexp, val);
+            });
 
             a.download = filename + '.' + format;
             document.body.appendChild(a);
@@ -143,7 +145,8 @@
                         res += '<td>'+td+'</td>' ;
                     });
                     res += '</tr>';
-                });template = template.replace('%tbody%',res);
+                });
+                template = template.replace('%tbody%',res);
 
                 result = template;
             break;
