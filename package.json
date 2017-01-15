@@ -1,5 +1,5 @@
 {
-  "name": "jquery-tableexport",
+  "name": "jquery-tableExport",
   "title": "jQuery Table Export",
   "description": "This is a simple jQuery plug-in that allows exporting html tables to: CSV, XLS, TXT, SQL.",
   "version": "1.0.1",
@@ -38,7 +38,13 @@
     "table",
     "exporting",
     "html",
-    "html5"
+    "html5",
+    "table exporter",
+    "jquery table",
+    "jquery table exporter",
+    "export table",
+    "jquery.table",
+    "jquery.tableExport"
   ],
   "devDependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
