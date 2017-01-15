@@ -1,12 +1,10 @@
 var webpack = require("webpack");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var fs = require("fs");
-var package = require('./package.json');
+const package = require('./package.json');
 
 const banner = [package.title + ' v' + package.version, package.homepage, 'Released under the MIT License.' ].join('\n');
 
 module.exports = {
-  entry: "./dist/tableExport.js",
+  entry: package.main,
   devtools: "source-map",
   output: {
     path: "./",
