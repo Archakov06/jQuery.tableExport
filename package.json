@@ -1,0 +1,47 @@
+{
+  "name": "jquery-tableexport",
+  "title": "jQuery Table Export",
+  "description": "This is a simple jQuery plug-in that allows exporting html tables to: CSV, XLS, TXT, SQL.",
+  "version": "1.0.1",
+  "main": "./dist/tableExport.js",
+  "homepage": "https://github.com/Archakov06/jQuery-tableExport",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/mar10/fancytree/master/LICENSE.txt"
+    }
+  ],
+  "author": {
+    "name": "Archakov Dennis",
+    "email": "hello@archakov.im",
+    "url": "http://archakov.im"
+  },
+  "bugs": {
+    "url": "https://github.com/Archakov06/jQuery-tableExport/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Archakov06/jQuery-tableExport.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery",
+    "tableexport",
+    "table",
+    "csv",
+    "xls",
+    "sql",
+    "txt",
+    "export",
+    "table",
+    "exporting",
+    "html",
+    "html5"
+  ],
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack": "^1.14.0"
+  }
+}
