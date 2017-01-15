@@ -1,5 +1,5 @@
 {
-  "name": "jquery-tableExport",
+  "name": "jQuery.tableExport",
   "title": "jQuery Table Export",
   "description": "This is a simple jQuery plug-in that allows exporting html tables to: CSV, XLS, TXT, SQL.",
   "version": "1.0.1",
