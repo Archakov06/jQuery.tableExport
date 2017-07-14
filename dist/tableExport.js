@@ -6,6 +6,7 @@
             filename: 'table',
             format: 'csv',
             cols: '',
+            excludeCols: '',
             head_delimiter: ';',
             column_delimiter: ';',
             onbefore: function(t){},
@@ -15,6 +16,7 @@
         var options = $.extend(defaults, options);
         var $this = $(this);
         var cols = options.cols ? options.cols.split(',') : [];
+        var excludeCols = options.excludeCols ? options.excludeCols.split(',') : [];
         var result = '';
         var data_type = { 'csv' : 'text/csv', 'txt' : 'text/plain', 'xls' : 'application/vnd.ms-excel', 'json' : 'application/json', };
 
@@ -32,9 +34,10 @@
                         if (c==i+1)
                             arr.push(e.innerText);
                     });
-                else
-                    arr.push(e.innerText);
-
+                else{
+                    if (excludeCols.indexOf((i+1).toString())==-1)
+                        arr.push(e.innerText);
+                }
             });
 
             return arr;
@@ -57,7 +60,8 @@
                 {
                     var td = $(e).find('td');
                     td.each(function(i,t){
-                        s.push(t.innerText);
+                        if (excludeCols.indexOf((i+1).toString())==-1)
+                            s.push(t.innerText);
                     });
                     arr.push(s);
                 }
