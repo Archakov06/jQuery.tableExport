@@ -1,4 +1,4 @@
-About
+jQuery Table Exporter
 -----------------------------------------------------------------------------------------
 
 This is a simple jQuery plug-in that allows exporting html tables to *CSV*, *XLS*, *TXT*, *SQL*.
@@ -36,6 +36,30 @@ $('.table').tableExport({
 });
 ```
 
+### Exclude columns
+
+```javascript
+$('.table').tableExport({
+	filename: 'table_%DD%-%MM%-%YY%',
+	format: 'csv',
+	excludeCols: '1,5',
+});
+```
+
+### Call events
+
+```javascript
+$('.table').tableExport({
+	filename: 'table_%DD%-%MM%-%YY%',
+	onbefore: function(){
+		alert('The export of tables begins!');
+	},
+	onafter: function(){
+		alert('Export complete :)');
+	}
+});
+```
+
 Date format
 -----------------------------------------------------------------------------------------
 * 	**%DD%**
@@ -59,11 +83,13 @@ Options
 	— the export file format (only: csv, xls, txt, sql)
 * 	**cols**
 	— select specific columns for export
+* 	**excludeCols**
+	— excludes specified columns when exporting
 * 	**head_delimiter**
 	— separator for titles when exporting
 * 	**column_delimiter**
 	— separator for column when exporting
-*	**before(this)**
+*	**onbefore(this)**
 	— Function to call before trigger is called
 *	**onafter(this)**
 	— Function to call after trigger is called
@@ -88,7 +114,7 @@ To Do
 * 	**E-Mail**
 	<hello@archakov.im>
 * 	**Website**
-	<http://archakov.im>
+	<https://archakov.im>
 
 ## License
 

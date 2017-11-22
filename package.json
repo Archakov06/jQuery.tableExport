@@ -1,10 +1,55 @@
 {
-  "name": "jQuery-tableExport",
+  "name": "jQuery.tableExport",
+  "title": "jQuery Table Export",
   "description": "This is a simple jQuery plug-in that allows exporting html tables to: CSV, XLS, TXT, SQL.",
-  "version": "1.0.0",
-  "homepage": "http://archakov.im/post/jquery-tableexport.html",
+  "version": "1.0.1",
+  "main": "./dist/tableExport.js",
+  "homepage": "https://github.com/Archakov06/jQuery-tableExport",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/mar10/fancytree/master/LICENSE.txt"
+    }
+  ],
   "author": {
-  	"name": "Archakov Dennis",
-  	"email": "hello@archakov.im"
+    "name": "Archakov Dennis",
+    "email": "hello@archakov.im",
+    "url": "http://archakov.im"
+  },
+  "bugs": {
+    "url": "https://github.com/Archakov06/jQuery-tableExport/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Archakov06/jQuery-tableExport.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery",
+    "tableexport",
+    "table",
+    "csv",
+    "xls",
+    "sql",
+    "txt",
+    "export",
+    "table",
+    "exporting",
+    "html",
+    "html5",
+    "table exporter",
+    "jquery table",
+    "jquery table exporter",
+    "export table",
+    "jquery.table",
+    "jquery.tableExport"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-banner": "^0.1.3",
+    "gulp-uglifyjs": "^0.6.2",
+    "webpack": "^1.14.0"
   }
 }

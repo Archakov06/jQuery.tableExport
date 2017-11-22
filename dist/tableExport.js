@@ -1,30 +1,26 @@
-/* 
- * jQuery-tableExport - v1.0 - 2016-05-25
- * https://github.com/Archakov06/jQuery-tableExport
- * Released under the MIT License.
-*/
-
 (function ($) {
 
     $.fn.tableExport = function (options) {
 
         var defaults = $.extend({
-          filename: 'table',
-          format: 'csv',
-          cols: '',
-          head_delimiter: ';',
-          column_delimiter: ';',
-          onbefore: function(t){},
-          onafter: function(t){}
+            filename: 'table',
+            format: 'csv',
+            cols: '',
+            excludeCols: '',
+            head_delimiter: ';',
+            column_delimiter: ';',
+            onbefore: function(t){},
+            onafter: function(t){}
         }, options);
 
         var options = $.extend(defaults, options);
         var $this = $(this);
         var cols = options.cols ? options.cols.split(',') : [];
+        var excludeCols = options.excludeCols ? options.excludeCols.split(',') : [];
         var result = '';
         var data_type = { 'csv' : 'text/csv', 'txt' : 'text/plain', 'xls' : 'application/vnd.ms-excel', 'json' : 'application/json', };
 
-        if ( typeof options.onbefore != "function" || typeof options.onafter != "function" || !options.format || !options.head_delimiter || !options.column_delimiter || !options.filename ) 
+        if ( typeof options.onbefore != "function" || typeof options.onafter != "function" || !options.format || !options.head_delimiter || !options.column_delimiter || !options.filename )
         { console.error( 'One of the parameters is incorrect.' ); return false; }
 
         function getHeaders(){
@@ -36,11 +32,12 @@
                 if (cols.length)
                     cols.forEach(function(c){
                         if (c==i+1)
-                        arr.push(e.innerText);
+                            arr.push(e.innerText);
                     });
-                else
-                    arr.push(e.innerText);
-
+                else{
+                    if (excludeCols.indexOf((i+1).toString())==-1)
+                        arr.push(e.innerText);
+                }
             });
 
             return arr;
@@ -63,7 +60,8 @@
                 {
                     var td = $(e).find('td');
                     td.each(function(i,t){
-                        s.push(t.innerText);
+                        if (excludeCols.indexOf((i+1).toString())==-1)
+                            s.push(t.innerText);
                     });
                     arr.push(s);
                 }
@@ -81,7 +79,7 @@
             var now = new Date();
             var time_arr = [
                 'DD:'+now.getDate(),
-                'MM:'+now.getDate(),
+                'MM:'+ (now.getMonth() + 1),
                 'YY:'+now.getFullYear(),
                 'hh:'+now.getHours(),
                 'mm:'+now.getMinutes(),
@@ -114,7 +112,7 @@
                     result += item.join( options.column_delimiter ) + "\n";
                 });
 
-            break;
+                break;
 
             case "txt":
                 var headers = getHeaders();
@@ -126,7 +124,7 @@
                     result += item.join( options.column_delimiter ) + "\n";
                 });
 
-            break;
+                break;
 
             case "xls":
                 var headers = getHeaders();
@@ -149,7 +147,7 @@
                 template = template.replace('%tbody%',res);
 
                 result = template;
-            break;
+                break;
 
             case "sql":
                 var headers = getHeaders();
@@ -159,7 +157,7 @@
                     result += "INSERT INTO table ("+ headers.join(",") +") VALUES ('"+ item.join("','") +"');";
                 });
 
-            break;
+                break;
 
         }
 
