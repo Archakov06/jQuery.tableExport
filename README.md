@@ -1,13 +1,11 @@
-jQuery Table Exporter
------------------------------------------------------------------------------------------
+## jQuery Table Exporter
 
-This is a simple jQuery plug-in that allows exporting html tables to *CSV*, *XLS*, *TXT*, *SQL*.
+This is a simple jQuery plug-in that allows exporting html tables to _CSV_,
+_XLS_, _TXT_, _SQL_, _JSON_.
 
 ![Example work](http://archakov.im/uploads/tableExport-1.gif)
 
-
-Usage
------------------------------------------------------------------------------------------
+## Usage
 
 Import the script before `</body>`:
 
@@ -19,8 +17,8 @@ And add this code to your javascript file:
 
 ```javascript
 $('.table').tableExport({
-	filename: 'table',
-	format: 'csv'
+  filename: 'table',
+  format: 'csv',
 });
 ```
 
@@ -30,9 +28,9 @@ $('.table').tableExport({
 
 ```javascript
 $('.table').tableExport({
-	filename: 'table_%DD%-%MM%-%YY%',	// the filename prefix + date format (the extension is automatic) 
-	format: 'xls', 						// type of your export file: csv, xls, txt, sql
-	cols: '2,3,4'						// export of specified columns
+  filename: 'table_%DD%-%MM%-%YY%', // the filename prefix + date format (the extension is automatic)
+  format: 'xls', // type of your export file: csv, xls, txt, sql, json
+  cols: '2,3,4', // export of specified columns
 });
 ```
 
@@ -40,9 +38,9 @@ $('.table').tableExport({
 
 ```javascript
 $('.table').tableExport({
-	filename: 'table_%DD%-%MM%-%YY%',
-	format: 'csv',
-	excludeCols: '1,5',
+  filename: 'table_%DD%-%MM%-%YY%',
+  format: 'csv',
+  excludeCols: '1,5',
 });
 ```
 
@@ -50,71 +48,71 @@ $('.table').tableExport({
 
 ```javascript
 $('.table').tableExport({
-	filename: 'table_%DD%-%MM%-%YY%',
-	onbefore: function(){
-		alert('The export of tables begins!');
-	},
-	onafter: function(){
-		alert('Export complete :)');
-	}
+  filename: 'table_%DD%-%MM%-%YY%',
+  onbefore: function() {
+    alert('The export of tables begins!');
+  },
+  onafter: function() {
+    alert('Export complete :)');
+  },
 });
 ```
 
-Date format
------------------------------------------------------------------------------------------
-* 	**%DD%**
-	— day
-* 	**%MM%**
-	— month
-* 	**%YY%**
-	— year
-* 	**%hh%**
-	— hours
-* 	**%mm%**
-	— minutes
-*	**%ss%**
-	— seconds
+## Date format
 
-Options
------------------------------------------------------------------------------------------
-* 	**filename**
-	— the name of the exported file (without extension)
-* 	**format**
-	— the export file format (only: csv, xls, txt, sql)
-* 	**cols**
-	— select specific columns for export
-* 	**excludeCols**
-	— excludes specified columns when exporting
-* 	**head_delimiter**
-	— separator for titles when exporting
-* 	**column_delimiter**
-	— separator for column when exporting
-*	**onbefore(this)**
-	— Function to call before trigger is called
-*	**onafter(this)**
-	— Function to call after trigger is called
+*     **%DD%**
+      	— day
+*     **%MM%**
+      	— month
+*     **%YY%**
+      	— year
+*     **%hh%**
+      	— hours
+*     **%mm%**
+      	— minutes
+* **%ss%** — seconds
 
-Demos
------------------------------------------------------------------------------------------
+## Options
+
+*     **filename**
+      	— the name of the exported file (without extension)
+*     **format**
+      	— the export file format (only: csv, xls, txt, sql, json)
+*     **cols**
+      	— select specific columns for export
+*     **excludeCols**
+      	— excludes specified columns when exporting
+*     **head_delimiter**
+      	— separator for titles when exporting
+*     **column_delimiter**
+      	— separator for column when exporting
+* **onbefore(this)** — Function to call before trigger is called
+* **onafter(this)** — Function to call after trigger is called
+
+## Demos
 
 More demos in the examples folder. Or on the links below :)
 
-* 	**[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
-* 	**[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
+*     **[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
+*     **[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
 
+## To Do
 
-To Do
------------------------------------------------------------------------------------------
+* [x] Parsing date
+* [x] Exporting SQL
+* [x] Support Safari browser
 
-- [x] Parsing date
-- [x] Exporting SQL
-- [ ] Support Safari browser
+#### 30.11.2017
+
+* UPD: JSON Exporting
+* Bug fixes
 
 ## Contacts
-* 	**E-Mail**
-	<hello@archakov.im>
-* 	**Website**
-	<https://archakov.im>
+
+*     **E-Mail**
+      	<hello@archakov.im>
+*     **Website**
+      	<https://archakov.im>
 
 ## License
 
