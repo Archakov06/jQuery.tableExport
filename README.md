@@ -10,7 +10,7 @@ _XLS_, _TXT_, _SQL_, _JSON_.
 Import the script before `</body>`:
 
 ```html
-  <script type="text/javascript" src="tableExport.js"></script>
+<script type="text/javascript" src="tableExport.js"></script>
 ```
 
 And add this code to your javascript file:
@@ -81,8 +81,8 @@ $('.table').tableExport({
 
 More demos in the examples folder. Or on the links below :)
 
-* **[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
-* **[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
+* **[Example #1](https://htmlpreview.github.io/?https://github.com/Archakov06/jQuery.tableExport/blob/master/examples/example_1.html)**
+* **[Example #2](https://htmlpreview.github.io/?https://github.com/Archakov06/jQuery.tableExport/blob/master/examples/example_2.html)**
 
 ## To Do
 
