@@ -59,33 +59,21 @@ $('.table').tableExport({
 ```
 
 ## Date format
-
-*     **%DD%**
-      	— day
-*     **%MM%**
-      	— month
-*     **%YY%**
-      	— year
-*     **%hh%**
-      	— hours
-*     **%mm%**
-      	— minutes
+* **%DD%** — day
+* **%MM%** — month
+* **%YY%** — year
+* **%hh%** — hours
+* **%mm%** — minutes
 * **%ss%** — seconds
 
 ## Options
 
-*     **filename**
-      	— the name of the exported file (without extension)
-*     **format**
-      	— the export file format (only: csv, xls, txt, sql, json)
-*     **cols**
-      	— select specific columns for export
-*     **excludeCols**
-      	— excludes specified columns when exporting
-*     **head_delimiter**
-      	— separator for titles when exporting
-*     **column_delimiter**
-      	— separator for column when exporting
+* **filename** — the name of the exported file (without extension)
+* **format** — the export file format (only: csv, xls, txt, sql, json)
+* **cols** — select specific columns for export
+* **excludeCols** — excludes specified columns when exporting
+* **head_delimiter** — separator for titles when exporting
+* **column_delimiter** — separator for column when exporting
 * **onbefore(this)** — Function to call before trigger is called
 * **onafter(this)** — Function to call after trigger is called
 
@@ -93,8 +81,8 @@ $('.table').tableExport({
 
 More demos in the examples folder. Or on the links below :)
 
-*     **[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
-*     **[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
+* **[Example #1](http://archakov.im/uploads/iframes/tableExport/example_1.html)**
+* **[Example #2](http://archakov.im/uploads/iframes/tableExport/example_2.html)**
 
 ## To Do
 
@@ -108,11 +96,8 @@ More demos in the examples folder. Or on the links below :)
 * Bug fixes
 
 ## Contacts
-
-*     **E-Mail**
-      	<hello@archakov.im>
-*     **Website**
-      	<https://archakov.im>
+* **E-Mail**: <hello@archakov.im>
+* **Website**: <https://archakov.im>
 
 ## License
 
