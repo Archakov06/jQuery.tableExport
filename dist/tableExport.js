@@ -6,8 +6,9 @@
         format: 'csv',
         cols: '',
         excludeCols: '',
-        head_delimiter: ';',
-        column_delimiter: ';',
+        head_delimiter: ',',
+        column_delimiter: ',',
+        quote: true,
         onBefore: function(t) {},
         onAfter: function(t) {},
       },
@@ -127,6 +128,20 @@
       case 'csv':
         var headers = getHeaders();
         var items = getItems();
+
+        if (options.quote === true) {
+          var quote = options.quote === true ? "\"" : null;
+          
+          headers.forEach(function (item, i) {
+            headers[i] = quote + item + quote;
+          });
+
+          items.forEach(function (item, i) {
+            item.forEach(function (cell, j){
+              item[j] = quote + cell + quote;
+            });            
+          });
+        }
 
         result += headers.join(options.head_delimiter) + '\n';
 
